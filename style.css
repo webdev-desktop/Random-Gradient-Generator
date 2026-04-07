@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --fs-small: clamp(11px, 1.2vw, 13px);
+  --fs-normal: clamp(13px, 1.5vw, 15px);
+  --fs-medium: clamp(15px, 2vw, 18px);
+  --fs-large: clamp(18px, 2.5vw, 22px);
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2e8f0;
+}
+
+.title {
+  text-align: center;
+  font-size: var(--fs-large);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.section_title {
+  font-size: var(--fs-small);
+  opacity: 0.7;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+/* Main Card */
+.main_container {
+  width: 95%;
+  max-width: 420px;
+  padding: 22px;
+  border-radius: 18px;
+  background: rgb(15, 23, 42);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+}
+
+/* Gradient Preview */
+#main_div {
+  height: 190px;
+  border-radius: 14px;
+  position: relative;
+  margin-bottom: 18px;
+  overflow: hidden;
+  background-color: transparent;
+  /* box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4); */
+}
+
+/* Color Buttons */
+#leftButton,
+#rightButton {
+  font-size: clamp(8px, 1vw, 11px);
+  position: absolute;
+  bottom: 12px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+#leftButton {
+  left: 12px;
+}
+
+#rightButton {
+  right: 12px;
+}
+
+#leftButton:hover,
+#rightButton:hover {
+  transform: scale(1.1);
+  border-color: #fff;
+}
+
+/* Generate Button */
+#genGradButton {
+  width: 100%;
+  padding: 13px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  background: linear-gradient(135deg, #6366f1, #7c3aed);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: var(--fs-normal);
+}
+
+#genGradButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.5);
+}
+
+/* Headings */
+p {
+  font-size: var(--fs-small);
+  margin: 14px 0 6px;
+  opacity: 0.75;
+}
+
+/* Angle Buttons */
+.gradAngle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.gradAngle button {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: #cbd5f5;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.gradAngle button:hover {
+  background: #6366f1;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Copy Box */
+#copyClipBoard {
+  font-size: var(--fs-small);
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#copyClipBoard:hover {
+  background: rgba(99, 102, 241, 0.15);
+}
+
+/* Toast Message */
+.toastMsg {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  background: #22c55e;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeInOut 2.5s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+  .main_container {
+    padding: 18px;
+  }
+
+  #main_div {
+    height: 160px;
+  }
+
+  #leftButton,
+  #rightButton {
+    width: 45px;
+    height: 45px;
+    font-size: 9px;
+  }
+}

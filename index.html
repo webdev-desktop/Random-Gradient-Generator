@@ -1,0 +1,56 @@
+<!-- @format -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Gradient Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- <main> -->
+    <div class="main_container">
+      <!-- TITLE ADD KAR -->
+      <h2 class="title">🎨 Color Gradient Generator</h2>
+
+      <!-- GRADIENT PREVIEW -->
+      <div id="main_div">
+        <button id="leftButton"></button>
+        <button id="rightButton"></button>
+      </div>
+
+      <!-- GENERATE BUTTON -->
+      <button id="genGradButton">Generate Random Gradient</button>
+
+      <!-- ANGLE SECTION -->
+      <p class="section_title">Choose Direction</p>
+
+      <div class="gradAngle">
+        <button id="rightAngle">
+          <i class="fa-solid fa-right-long"></i>
+        </button>
+        <button id="leftAngle"><i class="fa-solid fa-left-long"></i></button>
+        <button id="topAngle"><i class="fa-solid fa-up-long"></i></button>
+        <button id="bottomAngle">
+          <i class="fa-solid fa-down-long"></i>
+        </button>
+      </div>
+
+      <!-- COPY SECTION -->
+      <p class="section_title">Click to Copy CSS</p>
+      <div id="copyClipBoard"></div>
+    </div>
+    <!-- </main> -->
+  </body>
+  <script src="script.js"></script>
+</html>
