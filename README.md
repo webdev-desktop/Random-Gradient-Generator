@@ -1,7 +1,7 @@
 # 🎨 Random Gradient Generator
 
 🚀 **Live Demo:**
-🔗 [Live Demo](https://blogs.webdevzone.in)
+🔗 [Live Demo](https://gradient.webdevzone.in)
 
 A modern and lightweight web app that generates **beautiful random color gradients** with a single click. Built using pure HTML, CSS, and JavaScript, this project is perfect for developers and designers looking for UI inspiration.
 
